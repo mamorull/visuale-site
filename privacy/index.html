@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — Visuale</title>
+<meta name="description" content="Learn Spanish vocabulary with illustrated flashcards.">
+<link rel="icon" href="../icon.png"><style>
+:root{--bg:#fbfaf7;--fg:#1d1d1f;--muted:#6e6e73;--line:#e5e2dc;--card:#ffffff;--accent:#5b5f97}
+@media (prefers-color-scheme:dark){:root{--bg:#141416;--fg:#f2f2f4;--muted:#a1a1a6;--line:#2c2c30;--card:#1c1c1f;--accent:#a5a8e6}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif}
+header,main,footer{max-width:760px;margin:0 auto;padding:0 20px}
+header{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;padding-top:22px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+header .brand{font-weight:700;font-size:19px;color:var(--fg);text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:10px}
+header .brand img{width:32px;height:32px;border-radius:8px}
+header nav{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:15px}
+a{color:var(--accent)}header nav a{text-decoration:none}header nav a[aria-current]{color:var(--fg);font-weight:600}
+main{padding-top:26px;padding-bottom:40px}
+h1{font-size:30px;line-height:1.2;margin:.2em 0 .6em}h2{font-size:21px;margin:1.8em 0 .5em}h3{font-size:18px;margin:1.4em 0 .4em}
+hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+blockquote{margin:1.2em 0;padding:12px 16px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+blockquote p{margin:.3em 0}code{font:15px ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1px 5px;overflow-wrap:anywhere}
+ul{padding-left:1.3em}li{margin:.3em 0}
+.lead{font-size:19px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:22px}
+.cards a{display:block;padding:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;text-decoration:none;color:var(--fg);font-weight:600}
+dt{font-weight:600;margin-top:1em}dd{margin:.2em 0 0}
+footer{padding-top:16px;padding-bottom:30px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+</style></head>
+<body><header><a class="brand" href="../"><img src="../icon.png" alt="">Visuale</a><nav><a href="../privacy/" aria-current="page">Privacy Policy</a><a href="../terms/">Terms of Use</a><a href="../support/">Support</a> <a href="../ru/privacy/" hreflang="ru" lang="ru">Русский</a></nav></header>
+<main><h1>Privacy Policy</h1><h2>Who we are</h2>
+<p>Visuale is a Spanish-vocabulary flashcard app. The app's developer and owner is Aleksei Vasilev, an individual. For questions about this privacy policy and the handling of personal data, contact <code>privacy@visualeapp.com</code>; for general questions and support, contact <code>support@visualeapp.com</code>.</p>
+<blockquote>
+<p><strong>Visuale has no server of its own.</strong> The app runs entirely on your device, plus sync through your personal iCloud account. The developer does not operate any backend that collects data from users of this app — in the vast majority of cases, the data described below never physically passes through any system operated by the developer.</p>
+</blockquote>
+<hr />
+<h2>What data is collected and how it's used</h2>
+<h3>1. Your decks and cards — sync via iCloud (<code>CloudKit</code>)</h3>
+<p>Your decks, cards (Spanish terms, translations, examples, artwork references) and learning progress (answer history, review intervals) are stored locally on your device and synced across your own devices through Apple <code>CloudKit</code> — this happens through your personal, private <code>CloudKit</code> database, tied to your Apple ID/iCloud account.</p>
+<p><strong>What answer statistics are used for.</strong> Data about how you answer cards in Review and Exercise mode (correct/incorrect, the card's current learning stage, the date it is next due) is used solely to run the spaced-repetition queue-building algorithm — it decides which card to show you next and when, so that studying is effective. This statistic is never analyzed off your device, never used to build a user profile, and never shared with advertisers or analytics services — there are none in the app (see section 5).</p>
+<ul>
+<li><strong>This data is not accessible to the app's developer</strong> — it lives in a private <code>CloudKit</code> container that only your own Apple account can reach.</li>
+<li><strong>If you are not signed into iCloud on the device</strong>, the app keeps working fully locally, without sync.</li>
+<li><strong>Managing this data</strong> (viewing, deleting, exporting) is entirely governed by Apple and iCloud, under Apple's privacy policy: <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a>.</li>
+</ul>
+<h3>2. Subscription purchases — <code>StoreKit</code></h3>
+<p>If a paid subscription is introduced in the future and you purchase it, payment processing is handled entirely by Apple through <code>StoreKit</code> — the App Store. The app:</p>
+<ul>
+<li><strong>does not collect or see</strong> your payment card details;</li>
+<li><strong>only receives your current subscription status from <code>StoreKit</code></strong> (whether it's active right now) — used solely to unlock or lock the app's paid features;</li>
+<li><strong>does not send subscription information to any developer-operated server</strong> (there is none) — subscription status is checked directly against Apple on every launch.</li>
+</ul>
+<p>Payment processing is governed by Apple's privacy policy: <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a>.</p>
+<h3>3. "Scan Photo" feature — processed entirely on-device</h3>
+<p>This feature lets you photograph Spanish text (a textbook page, a sign, etc.) so the app can recognize words in it and suggest adding them as cards.</p>
+<ul>
+<li><strong>The photo is captured through the device camera</strong> (requires the <code>NSCameraUsageDescription</code> permission).</li>
+<li><strong>All text recognition, part-of-speech detection, lemmatization</strong>, and text structure analysis are performed locally on your device using iOS's standard built-in technologies.</li>
+<li><strong>Generating example sentences and resolving articles</strong> may additionally use the device's built-in system language models (available on some devices) — these run either directly on the device or, for more complex requests, through Apple's secure cloud infrastructure, which, per Apple's documentation, does not retain the data it processes. Either way, this data is never sent to the developer (there is none) or to any third party.</li>
+<li><strong>The photo itself is never saved by the app</strong> — not to device storage, not to the photo library, not anywhere else. It is used only in memory for the duration of recognition and never leaves the device.</li>
+<li><strong>Data obtained from scanning</strong> (recognized text, suggested words and translations) is used exclusively to create decks and cards — and only the ones you explicitly confirm on the preview screen before adding them. It is never used for anything else.</li>
+</ul>
+<p>The same principle applies to importing a deck from a <code>CSV</code> file: the content of the file you choose is used exclusively to create the cards of the imported deck. The file itself is never stored by the app beyond the single read needed to perform the import.</p>
+<h3>4. Single-word/example translation (the ✨ auto-generation buttons)</h3>
+<p>When manually creating or editing a card, the app can suggest a translation for a term or generate an example sentence. Word translation is performed by iOS's built-in system translation technology, which translates on-device; on first use of a given language pair, the system may download the corresponding language pack directly from Apple's own servers (this is standard iOS behavior, not your data being sent out — the text you are translating is not collected or stored off-device by Apple). Example generation (on supported devices) uses the same built-in system technologies described in section 3.</p>
+<h3>5. No third-party tracking, analytics, or advertising</h3>
+<p>Visuale contains no third-party SDKs for analytics, user-behavior tracking, or advertising. The app makes no hidden network requests and does not share data about your activity with any third party. We do not use Apple's <code>App Tracking Transparency (ATT)</code> framework, because the app does not track you across other apps or websites.</p>
+<hr />
+<h2>Data you provide yourself</h2>
+<p>Terms, translations, examples, and deck names you enter manually are data you create yourself; they are stored the same way described in section 1 (locally + sync through your own iCloud).</p>
+<hr />
+<h2>Age of users</h2>
+<p>The app does not request or collect information that identifies you as a person (name, email, date of birth, etc.) — all personalization relies solely on your own Apple ID/iCloud account, managed by Apple, not by the developer. The app is not designed to collect data from children under 13 (the COPPA standard), nor from anyone below the age of consent for personal-data processing under applicable local law — within the EU/EEA this varies by country from 13 to 16 under the GDPR (for example, 14 in Spain) — separately from Apple's general Apple ID rules.</p>
+<hr />
+<h2>Your rights</h2>
+<p>Because Visuale has no server of its own, and all the data described in this document lives on your device and in your own <code>CloudKit</code> database, managing it — access, export, correction, deletion — is done directly through your Apple ID and iCloud settings, not through the developer (see section 1). If you are located in the European Union or European Economic Area, you also have the right to lodge a complaint with a data protection supervisory authority — in Spain, this is the Agencia Española de Protección de Datos (AEPD, <a href="https://www.aepd.es/">https://www.aepd.es/</a>). The developer, being an individual with no server infrastructure of their own, does not share your personal data with any third party beyond Apple's own infrastructure described in this document.</p>
+<hr />
+<h2>Changes to this policy</h2>
+<p>If future versions of the app introduce new ways of handling data (for example, server-based sync or new integrations), this page will be updated and the “Last updated” date in the Contact section will change. Whenever this document changes in a material way — in particular, when a new way of collecting or using data is introduced — the app will ask you to explicitly agree to the updated version again the next time you launch it, and access to the app's features remains gated on that agreement. Non-material changes — wording clarifications, typo fixes, and similar editorial edits that do not change the actual scope or manner of data processing — take effect without a blocking re-consent prompt.</p>
+<hr />
+<h2>What we don't do</h2>
+<p>Except as explicitly described above, Visuale does not collect or use any other information about your actions inside the app, and no other personal information about you. In particular, it does not track usage of individual screens beyond the local answer statistics described in section 1, does not build an advertising or behavioral profile of you, and does not share data about your activity with any third party.</p>
+<hr />
+<h2>Contact</h2>
+<ul>
+<li><code>support@visualeapp.com</code> — support and general questions</li>
+<li><code>privacy@visualeapp.com</code> — personal data and this privacy policy</li>
+<li><code>legal@visualeapp.com</code> — legal matters and copyright</li>
+<li><code>sales@visualeapp.com</code> — cooperation, partnerships</li>
+<li><code>ideas@visualeapp.com</code> — ideas and suggestions for the app</li>
+</ul>
+<p><strong>Owner:</strong> Aleksei Vasilev<br />
+<strong>Last updated:</strong> September 11, 2026</p></main>
+<footer>© 2026 Aleksei Vasilev · <a href="mailto:support@visualeapp.com">support@visualeapp.com</a></footer></body></html>
