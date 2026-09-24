@@ -16,7 +16,7 @@ T = {
                support_more="Other contacts: <a href=\"mailto:privacy@visualeapp.com\">privacy@visualeapp.com</a> (personal data), <a href=\"mailto:legal@visualeapp.com\">legal@visualeapp.com</a> (legal matters, copyright), <a href=\"mailto:ideas@visualeapp.com\">ideas@visualeapp.com</a> (ideas), <a href=\"mailto:sales@visualeapp.com\">sales@visualeapp.com</a> (cooperation).",
                faq=[("Is Visuale free?", "Yes. Visuale is in early access: all features are free right now. We will announce any change in advance."),
                     ("Do I need an account?", "No. Your decks and progress sync between your devices through your own iCloud account."),
-                    ("My cards don't sync.", "Check that you are signed in to iCloud on both devices and that iCloud is enabled for Visuale in Settings → your name → iCloud."),
+                    ("Why don't my cards sync?", "Check that you are signed in to iCloud on both devices and that iCloud is enabled for Visuale in Settings → your name → iCloud."),
                     ("How do I delete my data?", "Delete the app and, if needed, its iCloud data in Settings → your name → iCloud → Manage Account Storage → Visuale.")]),
     "ru": dict(lang="ru", other="en", other_label="English", home="Главная", privacy="Политика конфиденциальности",
                terms="Условия использования", support="Поддержка", tagline="Испанские слова по иллюстрированным карточкам.",
@@ -26,7 +26,7 @@ T = {
                support_more="Другие адреса: <a href=\"mailto:privacy@visualeapp.com\">privacy@visualeapp.com</a> (персональные данные), <a href=\"mailto:legal@visualeapp.com\">legal@visualeapp.com</a> (юридические вопросы, авторское право), <a href=\"mailto:ideas@visualeapp.com\">ideas@visualeapp.com</a> (идеи), <a href=\"mailto:sales@visualeapp.com\">sales@visualeapp.com</a> (сотрудничество).",
                faq=[("Visuale бесплатный?", "Да. Сейчас идёт ранний доступ: все функции бесплатны. Об изменениях мы сообщим заранее."),
                     ("Нужна ли регистрация?", "Нет. Колоды и прогресс синхронизируются между вашими устройствами через ваш собственный iCloud."),
-                    ("Карточки не синхронизируются.", "Проверьте, что на обоих устройствах выполнен вход в iCloud и что для Visuale включён iCloud: Настройки → ваше имя → iCloud."),
+                    ("Почему карточки не синхронизируются?", "Проверьте, что на обоих устройствах выполнен вход в iCloud и что для Visuale включён iCloud: Настройки → ваше имя → iCloud."),
                     ("Как удалить мои данные?", "Удалите приложение и при необходимости его данные в iCloud: Настройки → ваше имя → iCloud → Управлять хранилищем → Visuale.")]),
 }
 
