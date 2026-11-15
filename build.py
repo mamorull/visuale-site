@@ -4,11 +4,14 @@
 import html, pathlib, markdown
 
 ROOT = pathlib.Path(__file__).parent
-DOCS = ROOT.parent / "Visuale" / "docs"
+# Репозиторий приложения переехал с Desktop в ~/Projects (2026-11-15) — берём первый существующий путь.
+import os
+DOCS = next(p for p in (pathlib.Path(os.environ.get("VISUALE_DOCS", ROOT.parent / "Visuale" / "docs")),
+                        pathlib.Path.home() / "Projects" / "Visuale" / "docs") if p.is_dir())
 SUPPORT = "support@visualeapp.com"
 
 T = {
-    "en": dict(lang="en", other="ru", other_label="Русский", home="Home", privacy="Privacy Policy",
+    "en": dict(lang="en", label="English", home="Home", privacy="Privacy Policy",
                terms="Terms of Use", support="Support", tagline="Learn Spanish vocabulary with illustrated flashcards.",
                home_text="Visuale is an iPhone app for learning Spanish vocabulary (Spanish as spoken in Spain) with illustrated flashcards, spaced repetition, exercises and photo scanning.",
                support_title="Support",
@@ -18,7 +21,7 @@ T = {
                     ("Do I need an account?", "No. Your decks and progress sync between your devices through your own iCloud account."),
                     ("Why don't my cards sync?", "Check that you are signed in to iCloud on both devices and that iCloud is enabled for Visuale in Settings → your name → iCloud."),
                     ("How do I delete my data?", "Delete the app and, if needed, its iCloud data in Settings → your name → iCloud → Manage Account Storage → Visuale.")]),
-    "ru": dict(lang="ru", other="en", other_label="English", home="Главная", privacy="Политика конфиденциальности",
+    "ru": dict(lang="ru", label="Русский", home="Главная", privacy="Политика конфиденциальности",
                terms="Условия использования", support="Поддержка", tagline="Испанские слова по иллюстрированным карточкам.",
                home_text="Visuale — приложение для iPhone для изучения испанской лексики (испанский Испании): иллюстрированные карточки, интервальное повторение, упражнения и сканирование фото.",
                support_title="Поддержка",
@@ -28,6 +31,16 @@ T = {
                     ("Нужна ли регистрация?", "Нет. Колоды и прогресс синхронизируются между вашими устройствами через ваш собственный iCloud."),
                     ("Почему карточки не синхронизируются?", "Проверьте, что на обоих устройствах выполнен вход в iCloud и что для Visuale включён iCloud: Настройки → ваше имя → iCloud."),
                     ("Как удалить мои данные?", "Удалите приложение и при необходимости его данные в iCloud: Настройки → ваше имя → iCloud → Управлять хранилищем → Visuale.")]),
+    "es": dict(lang="es", label="Español", home="Inicio", privacy="Política de privacidad",
+               terms="Condiciones de uso", support="Soporte", tagline="Vocabulario en español con tarjetas ilustradas.",
+               home_text="Visuale es una app para iPhone para aprender vocabulario en español (el español de España) con tarjetas ilustradas, repetición espaciada, ejercicios y escaneo de fotos.",
+               support_title="Soporte",
+               support_text=f"¿Preguntas, errores o ideas? Escríbenos a <a href=\"mailto:{SUPPORT}\">{SUPPORT}</a>: solemos responder en unos días.",
+               support_more="Otras direcciones: <a href=\"mailto:privacy@visualeapp.com\">privacy@visualeapp.com</a> (datos personales), <a href=\"mailto:legal@visualeapp.com\">legal@visualeapp.com</a> (cuestiones legales, derechos de autor), <a href=\"mailto:ideas@visualeapp.com\">ideas@visualeapp.com</a> (ideas), <a href=\"mailto:sales@visualeapp.com\">sales@visualeapp.com</a> (colaboraciones).",
+               faq=[("¿Visuale es gratis?", "Sí. Visuale está en acceso anticipado: ahora mismo todas las funciones son gratuitas. Avisaremos con antelación de cualquier cambio."),
+                    ("¿Necesito una cuenta?", "No. Tus mazos y tu progreso se sincronizan entre tus dispositivos a través de tu propia cuenta de iCloud."),
+                    ("¿Por qué no se sincronizan mis tarjetas?", "Comprueba que has iniciado sesión en iCloud en ambos dispositivos y que iCloud está activado para Visuale en Ajustes → tu nombre → iCloud."),
+                    ("¿Cómo elimino mis datos?", "Elimina la app y, si quieres, sus datos de iCloud en Ajustes → tu nombre → iCloud → Gestionar almacenamiento → Visuale.")]),
 }
 
 CSS = """
@@ -54,16 +67,18 @@ dt{font-weight:600;margin-top:1em}dd{margin:.2em 0 0}
 footer{padding-top:16px;padding-bottom:30px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
 """
 
+PREFIX = {"en": "", "ru": "ru/", "es": "es/"}
+
 def page(lang, key, title, body, depth):
     t = T[lang]
     up = "../" * depth
-    prefix = "" if lang == "en" else "ru/"
-    other_prefix = "ru/" if lang == "en" else ""
+    prefix = PREFIX[lang]
     paths = {"home": "", "privacy": "privacy/", "terms": "terms/", "support": "support/"}
     nav = "".join(
         f'<a href="{up}{prefix}{p}"' + (' aria-current="page"' if k == key else "") + f">{html.escape(t[k])}</a>"
         for k, p in paths.items() if k != "home")
-    nav += f' <a href="{up}{other_prefix}{paths[key]}" hreflang="{t["other"]}" lang="{t["other"]}">{t["other_label"]}</a>'
+    nav += "".join(f' <a href="{up}{PREFIX[o]}{paths[key]}" hreflang="{o}" lang="{o}">{T[o]["label"]}</a>'
+                   for o in T if o != lang)
     return f"""<!doctype html>
 <html lang="{lang}"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -84,8 +99,8 @@ def md(name):
     src = (DOCS / name).read_text(encoding="utf-8")
     return markdown.markdown(src, extensions=["extra", "sane_lists", "nl2br"])
 
-for lang in ("en", "ru"):
-    t = T[lang]; base = "" if lang == "en" else "ru/"; d0 = 0 if lang == "en" else 1
+for lang in T:
+    t = T[lang]; base = PREFIX[lang]; d0 = 0 if lang == "en" else 1
     home = (f"<h1>Visuale</h1><p class=\"lead\">{t['tagline']}</p><p>{t['home_text']}</p>"
             f"<div class=\"cards\"><a href=\"privacy/\">{t['privacy']}</a><a href=\"terms/\">{t['terms']}</a><a href=\"support/\">{t['support']}</a></div>")
     write(f"{base}index.html", page(lang, "home", "Visuale", home, d0))

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Política de privacidad — Visuale</title>
+<meta name="description" content="Vocabulario en español con tarjetas ilustradas.">
+<link rel="icon" href="../../icon.png"><style>
+:root{--bg:#fbfaf7;--fg:#1d1d1f;--muted:#6e6e73;--line:#e5e2dc;--card:#ffffff;--accent:#5b5f97}
+@media (prefers-color-scheme:dark){:root{--bg:#141416;--fg:#f2f2f4;--muted:#a1a1a6;--line:#2c2c30;--card:#1c1c1f;--accent:#a5a8e6}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif}
+header,main,footer{max-width:760px;margin:0 auto;padding:0 20px}
+header{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;padding-top:22px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+header .brand{font-weight:700;font-size:19px;color:var(--fg);text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:10px}
+header .brand img{width:32px;height:32px;border-radius:8px}
+header nav{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:15px}
+a{color:var(--accent)}header nav a{text-decoration:none}header nav a[aria-current]{color:var(--fg);font-weight:600}
+main{padding-top:26px;padding-bottom:40px}
+h1{font-size:30px;line-height:1.2;margin:.2em 0 .6em}h2{font-size:21px;margin:1.8em 0 .5em}h3{font-size:18px;margin:1.4em 0 .4em}
+hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+blockquote{margin:1.2em 0;padding:12px 16px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+blockquote p{margin:.3em 0}code{font:15px ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1px 5px;overflow-wrap:anywhere}
+ul{padding-left:1.3em}li{margin:.3em 0}
+.lead{font-size:19px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:22px}
+.cards a{display:block;padding:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;text-decoration:none;color:var(--fg);font-weight:600}
+dt{font-weight:600;margin-top:1em}dd{margin:.2em 0 0}
+footer{padding-top:16px;padding-bottom:30px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+</style></head>
+<body><header><a class="brand" href="../../es/"><img src="../../icon.png" alt="">Visuale</a><nav><a href="../../es/privacy/" aria-current="page">Política de privacidad</a><a href="../../es/terms/">Condiciones de uso</a><a href="../../es/support/">Soporte</a> <a href="../../privacy/" hreflang="en" lang="en">English</a> <a href="../../ru/privacy/" hreflang="ru" lang="ru">Русский</a></nav></header>
+<main><h1>Política de privacidad</h1><h2>Quiénes somos</h2>
+<p>Visuale es una app de tarjetas para aprender vocabulario en español. El desarrollador y titular de la app es Aleksei Vasilev, persona física. Para preguntas sobre esta política de privacidad y el tratamiento de datos personales, escribe a <code>privacy@visualeapp.com</code>; para preguntas generales y soporte, a <code>support@visualeapp.com</code>.</p>
+<blockquote>
+<p><strong>Visuale no tiene servidor propio.</strong> La app funciona íntegramente en tu dispositivo, más la sincronización a través de tu cuenta personal de iCloud. El desarrollador no gestiona ningún servidor que recopile datos de los usuarios de esta app: en la inmensa mayoría de los casos, los datos descritos a continuación nunca pasan físicamente por ningún sistema gestionado por el desarrollador.</p>
+</blockquote>
+<hr />
+<h2>Qué datos se recopilan y cómo se usan</h2>
+<h3>1. Tus mazos y tarjetas: sincronización a través de iCloud (<code>CloudKit</code>)</h3>
+<p>Tus mazos, tarjetas (términos en español, traducciones, ejemplos, referencias a ilustraciones) y tu progreso de aprendizaje (historial de respuestas, intervalos de repaso) se guardan localmente en tu dispositivo y se sincronizan entre tus propios dispositivos mediante Apple <code>CloudKit</code>, a través de tu base de datos personal y privada de <code>CloudKit</code>, vinculada a tu ID de Apple / cuenta de iCloud.</p>
+<p><strong>Para qué se usan las estadísticas de respuestas.</strong> Los datos sobre cómo respondes a las tarjetas en los modos Repaso y Ejercicios (correcto/incorrecto, la etapa de aprendizaje actual de la tarjeta, la fecha de su próximo repaso) se usan únicamente para el algoritmo de repetición espaciada que construye la cola: decide qué tarjeta mostrarte a continuación y cuándo, para que el estudio sea eficaz. Estas estadísticas nunca se analizan fuera de tu dispositivo, nunca se usan para crear un perfil de usuario y nunca se comparten con anunciantes ni servicios de analítica: la app no tiene ninguno (ver sección 5).</p>
+<ul>
+<li><strong>El desarrollador no tiene acceso a estos datos</strong>: se encuentran en un contenedor privado de <code>CloudKit</code> al que solo puede acceder tu propia cuenta de Apple.</li>
+<li><strong>Si no has iniciado sesión en iCloud en el dispositivo</strong>, la app sigue funcionando por completo en local, sin sincronización.</li>
+<li><strong>La gestión de estos datos</strong> (consulta, eliminación, exportación) depende enteramente de Apple e iCloud, conforme a la política de privacidad de Apple: <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a>.</li>
+</ul>
+<h3>2. Compras de suscripción: <code>StoreKit</code></h3>
+<p>Si en el futuro se introduce una suscripción de pago y la contratas, el procesamiento del pago lo realiza íntegramente Apple a través de <code>StoreKit</code>, es decir, el App Store. La app:</p>
+<ul>
+<li><strong>no recopila ni ve</strong> los datos de tu tarjeta de pago;</li>
+<li><strong>solo recibe de <code>StoreKit</code> el estado actual de tu suscripción</strong> (si está activa en este momento), que se usa únicamente para desbloquear o bloquear las funciones de pago de la app;</li>
+<li><strong>no envía información sobre la suscripción a ningún servidor del desarrollador</strong> (no existe): el estado de la suscripción se comprueba directamente con Apple en cada inicio.</li>
+</ul>
+<p>El procesamiento de pagos se rige por la política de privacidad de Apple: <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a>.</p>
+<h3>3. Función «Escanear foto»: procesamiento íntegramente en el dispositivo</h3>
+<p>Esta función te permite fotografiar un texto en español (una página de un libro de texto, un cartel, etc.) para que la app reconozca sus palabras y te proponga añadirlas como tarjetas.</p>
+<ul>
+<li><strong>La foto se toma con la cámara del dispositivo</strong> (requiere el permiso <code>NSCameraUsageDescription</code>).</li>
+<li><strong>Todo el reconocimiento de texto, la detección de la categoría gramatical, la lematización</strong> y el análisis de la estructura del texto se realizan localmente en tu dispositivo con las tecnologías estándar integradas en iOS.</li>
+<li><strong>La generación de frases de ejemplo y la determinación de artículos</strong> pueden usar además los modelos de lenguaje integrados en el sistema del dispositivo (disponibles en algunos dispositivos): funcionan directamente en el dispositivo o, para solicitudes más complejas, a través de la infraestructura segura en la nube de Apple, que, según la documentación de Apple, no conserva los datos que procesa. En cualquier caso, estos datos nunca se envían al desarrollador (no tiene servidor) ni a terceros.</li>
+<li><strong>La app nunca guarda la foto</strong>: ni en el almacenamiento del dispositivo, ni en la fototeca, ni en ningún otro lugar. Solo se usa en memoria mientras dura el reconocimiento y nunca sale del dispositivo.</li>
+<li><strong>Los datos obtenidos del escaneo</strong> (texto reconocido, palabras y traducciones sugeridas) se usan exclusivamente para crear mazos y tarjetas, y solo los que confirmas expresamente en la pantalla de vista previa antes de añadirlos. Nunca se usan para nada más.</li>
+</ul>
+<p>El mismo principio se aplica a la importación de un mazo desde un archivo <code>CSV</code>: el contenido del archivo que eliges se usa exclusivamente para crear las tarjetas del mazo importado. La app no guarda el archivo más allá de la única lectura necesaria para la importación.</p>
+<h3>4. Traducción de una palabra o un ejemplo (botones de generación automática ✨)</h3>
+<p>Al crear o editar una tarjeta a mano, la app puede sugerir una traducción para un término o generar una frase de ejemplo. La traducción de palabras la realiza la tecnología de traducción integrada en iOS, que traduce en el dispositivo; la primera vez que se usa un par de idiomas, el sistema puede descargar el paquete de idioma correspondiente directamente de los servidores de Apple (es el comportamiento estándar de iOS, no un envío de tus datos: Apple no recopila ni guarda fuera del dispositivo el texto que traduces). La generación de ejemplos (en los dispositivos compatibles) usa las mismas tecnologías integradas del sistema descritas en la sección 3.</p>
+<h3>5. Sin seguimiento, analítica ni publicidad de terceros</h3>
+<p>Visuale no contiene SDK de terceros de analítica, seguimiento del comportamiento de los usuarios ni publicidad. La app no realiza solicitudes de red ocultas ni comparte datos sobre tu actividad con terceros. No usamos el marco <code>App Tracking Transparency (ATT)</code> de Apple, porque la app no te rastrea en otras apps ni sitios web.</p>
+<hr />
+<h2>Datos que proporcionas tú</h2>
+<p>Los términos, traducciones, ejemplos y nombres de mazos que introduces a mano son datos que creas tú mismo; se guardan de la forma descrita en la sección 1 (en local + sincronización a través de tu propio iCloud).</p>
+<hr />
+<h2>Edad de los usuarios</h2>
+<p>La app no solicita ni recopila información que te identifique como persona (nombre, correo electrónico, fecha de nacimiento, etc.): toda la personalización se basa únicamente en tu propia cuenta de ID de Apple / iCloud, gestionada por Apple y no por el desarrollador. La app no está diseñada para recopilar datos de menores de 13 años (estándar COPPA) ni de personas por debajo de la edad de consentimiento para el tratamiento de datos personales según la legislación local aplicable —en la UE/EEE, según el RGPD, varía por país entre 13 y 16 años (por ejemplo, 14 en España)—, con independencia de las normas generales de Apple sobre el ID de Apple.</p>
+<hr />
+<h2>Tus derechos</h2>
+<p>Como Visuale no tiene servidor propio y todos los datos descritos en este documento están en tu dispositivo y en tu propia base de datos de <code>CloudKit</code>, su gestión —acceso, exportación, rectificación, supresión— se realiza directamente desde los ajustes de tu ID de Apple e iCloud, y no a través del desarrollador (ver sección 1). Si te encuentras en la Unión Europea o en el Espacio Económico Europeo, también tienes derecho a presentar una reclamación ante una autoridad de control de protección de datos; en España, es la Agencia Española de Protección de Datos (AEPD, <a href="https://www.aepd.es/">https://www.aepd.es/</a>). El desarrollador, persona física sin infraestructura de servidores propia, no comparte tus datos personales con terceros más allá de la propia infraestructura de Apple descrita en este documento.</p>
+<hr />
+<h2>Cambios en esta política</h2>
+<p>Si futuras versiones de la app introducen nuevas formas de tratar los datos (por ejemplo, sincronización a través de un servidor o nuevas integraciones), esta página se actualizará y cambiará la fecha de «Última actualización» de la sección Contacto. Siempre que este documento cambie de forma sustancial —en particular, cuando se introduzca una nueva forma de recopilar o usar datos—, la app te pedirá que aceptes de nuevo expresamente la versión actualizada la próxima vez que la abras, y el acceso a las funciones de la app quedará condicionado a esa aceptación. Los cambios no sustanciales —aclaraciones de redacción, corrección de erratas y otras modificaciones editoriales similares que no cambian el alcance ni la forma real del tratamiento de datos— entran en vigor sin una solicitud de nueva aceptación que bloquee la app.</p>
+<hr />
+<h2>Lo que no hacemos</h2>
+<p>Salvo lo descrito expresamente más arriba, Visuale no recopila ni usa ninguna otra información sobre tus acciones dentro de la app ni ningún otro dato personal sobre ti. En particular, no registra el uso de pantallas concretas más allá de las estadísticas locales de respuestas descritas en la sección 1, no crea un perfil publicitario ni de comportamiento sobre ti y no comparte datos sobre tu actividad con terceros.</p>
+<hr />
+<h2>Contacto</h2>
+<ul>
+<li><code>support@visualeapp.com</code>: soporte y preguntas generales</li>
+<li><code>privacy@visualeapp.com</code>: datos personales y esta política de privacidad</li>
+<li><code>legal@visualeapp.com</code>: cuestiones legales y derechos de autor</li>
+<li><code>sales@visualeapp.com</code>: colaboraciones y asociaciones</li>
+<li><code>ideas@visualeapp.com</code>: ideas y sugerencias para la app</li>
+</ul>
+<p><strong>Titular:</strong> Aleksei Vasilev<br />
+<strong>Última actualización:</strong> 11 de septiembre de 2026</p></main>
+<footer>© 2026 Aleksei Vasilev · <a href="mailto:support@visualeapp.com">support@visualeapp.com</a></footer></body></html>
